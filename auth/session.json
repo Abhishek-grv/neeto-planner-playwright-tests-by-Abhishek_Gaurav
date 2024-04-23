@@ -1,0 +1,76 @@
+{
+  "cookies": [
+    {
+      "name": "__neetoauth_session",
+      "value": "358825aae012f5fd2642d0df407d8f34",
+      "domain": "app.neetoauth.net",
+      "path": "/",
+      "expires": 1721642485.275583,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "lang",
+      "value": "en-US",
+      "domain": "app.neetoauth.net",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Strict"
+    },
+    {
+      "name": "__neetoauth_session",
+      "value": "291753141243098977d824565cb16741",
+      "domain": "abhishek-gaurav-iiit-bbsr.neetoauth.net",
+      "path": "/",
+      "expires": 1721642489.820464,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "lang",
+      "value": "en-US",
+      "domain": "abhishek-gaurav-iiit-bbsr.neetoauth.net",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Strict"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://abhishek-gaurav-iiit-bbsr.neetoauth.net",
+      "localStorage": [
+        {
+          "name": "neeto-molecules-hidden-columns",
+          "value": "{\"state\":{},\"version\":0}"
+        },
+        {
+          "name": "neeto-ip-location-country-code",
+          "value": "{\"state\":{\"countryCode\":null},\"version\":0}"
+        }
+      ]
+    },
+    {
+      "origin": "https://app.neetoauth.net",
+      "localStorage": [
+        {
+          "name": "WIDGET_ENABLED_STATES",
+          "value": "{\"dkSGNrJLcofuXQAjmZG3B1La\":{\"chat\":false,\"changelog\":false,\"replay\":true},\"djGuPyUK7GPKEWibWYEjcvyK\":{\"replay\":false,\"chat\":true,\"changelog\":false}}"
+        },
+        {
+          "name": "neeto-molecules-hidden-columns",
+          "value": "{\"state\":{},\"version\":0}"
+        },
+        {
+          "name": "neeto-ip-location-country-code",
+          "value": "{\"state\":{\"countryCode\":null},\"version\":0}"
+        }
+      ]
+    }
+  ]
+}
