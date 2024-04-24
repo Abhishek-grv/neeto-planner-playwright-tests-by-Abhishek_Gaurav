@@ -1,5 +1,6 @@
 import { defineConfig, devices } from '@playwright/test';
 
+export const STORAGE_STATE = "./auth/session.json";
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
