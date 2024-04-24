@@ -13,6 +13,7 @@ test.describe("Login page", () => {
         
         // Step 1: Navigate to the login page
         await page.goto("/");
+
         // Step 2: Fill in the email
         await loginPage.loginAndVerifyUser({ email: "cpts9gnqty9-planner-abhishek_gaurav-iiit_bbsr@bigbinary.com", otp: randomOtp});
         // Step 3: Save the storage state
