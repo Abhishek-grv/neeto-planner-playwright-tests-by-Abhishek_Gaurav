@@ -1,30 +1,25 @@
-// poms/tasks.ts
-
 import { Page, expect } from "@playwright/test";
 
-export class TaskPage {
+interface ProjectData {
+  name: string;
+  description: string;
+}
+
+export default class ProjectPage {
   page: Page;
 
   constructor(page: Page) {
     this.page = page;
   }
 
-  createTaskAndVerify = async ({ taskName }: { taskName: string }) => {
-    await this.page.getByTestId("navbar-add-todo-link").click();
-    await this.page.getByTestId("form-title-field").fill(taskName);
-
-    await this.page.locator(".css-2b097c-container").click();
-    await this.page
-      .locator(".css-26l3qy-menu")
-      .getByText("Oliver Smith")
-      .click();
-    await this.page.getByTestId("form-submit-button").click();
-    const taskInDashboard = this.page
-      .getByTestId("tasks-pending-table")
-      .getByRole("row", {
-        name: new RegExp(taskName, "i"),
-      });
-    await taskInDashboard.scrollIntoViewIfNeeded();
-    await expect(taskInDashboard).toBeVisible();
+  async createProject(projectData: ProjectData) {
+    const { name, description } = projectData;
+    
+    await this.page.click('button:has-text("Add new project")');
+    await this.page.fill('[placeholder="Enter project name"]', name);
+    await this.page.fill('[placeholder="Enter description"]', description);
+    await this.page.click('button:has-text("Save changes")');
+    // Wait for success message or confirmation of project creation
+    await expect(this.page.getByText(name)).toBeVisible();
   };
 }

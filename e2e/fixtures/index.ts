@@ -1,12 +1,10 @@
-// fixtures/index.ts
-
 import { test as base } from "@playwright/test";
 import {LoginPage} from "../poms/login"
-import { TaskPage } from "../poms/createProject";
+import ProjectPage from "../poms/createProject";
 
 interface ExtendedFixtures {
   loginPage: LoginPage;
-  taskPage: TaskPage;
+  projectPage: ProjectPage;
 }
 
 export const test = base.extend<ExtendedFixtures>({
@@ -14,8 +12,8 @@ export const test = base.extend<ExtendedFixtures>({
     const loginPage = new LoginPage(page);
     await use(loginPage);
   },
-  taskPage: async ({ page }, use) => {
-    const taskPage = new TaskPage(page);
-    await use(taskPage);
+  projectPage: async ({ page }, use) => {
+    const projectPage = new ProjectPage(page);
+    await use(projectPage);
   },
 });
